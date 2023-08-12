@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="553.0" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.douglasalvarado.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="634.0" fitWidth="553.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Logo.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="44.0" prefWidth="553.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulós">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresa" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="Tipo Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Productos" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Tablas Has">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto_has_PlatoController" text="Productos_has_Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicios_has_Platos" text="Servicios_has_Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventananServicios_has_Empleados" text="Servicios_has_Empleados" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuBar>
+      <Button layoutX="32.0" layoutY="574.0" mnemonicParsing="false" onAction="#VentanaLogin" style="-fx-background-radius: 10 10 10 10; -fx-border-radius: 10 10 10 10;" styleClass="botonPantilla" text="Regresar" />
+   </children>
+</AnchorPane>

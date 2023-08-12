@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="564.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.douglasalvarado.controller.UsuarioController">
+   <children>
+      <ImageView fitHeight="687.0" fitWidth="858.0" layoutX="-93.0" layoutY="-186.0" opacity="0.7" pickOnBounds="true">
+         <image>
+            <Image url="@../image/Fondo.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <AnchorPane fx:id="pantallaSlide" prefHeight="46.0" prefWidth="474.0" style="-fx-background-color: #8f2520;">
+         <children>
+            <HBox layoutX="121.0" prefHeight="46.0" prefWidth="233.0">
+               <children>
+                  <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#nuevo" prefHeight="42.0" prefWidth="114.0" style="-fx-background-radius: 0 0 20 20;" styleClass="botonPantilla" stylesheets="@../resource/TonysKinal.css" text="Agregar">
+                     <graphic>
+                        <ImageView fx:id="imgAgregar" fitHeight="33.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/addUser.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#cancelar" prefHeight="42.0" prefWidth="116.0" styleClass="botonPantilla" stylesheets="@../resource/TonysKinal.css" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="63.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/cancelar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="137.0" fitWidth="100.0" layoutX="463.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/LogoSimplificado.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="463.0" layoutY="133.0" prefHeight="257.0" prefWidth="100.0" style="-fx-background-color: #8f2520;">
+         <children>
+            <Label layoutX="19.0" layoutY="77.0" text="Kinal">
+               <font>
+                  <Font name="Bodoni MT Black" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="38.0" text="Tonys ">
+               <font>
+                  <Font name="Bodoni MT Black" size="26.0" />
+               </font>
+            </Label>
+            <VBox layoutX="7.0" layoutY="114.0" prefHeight="66.0" prefWidth="86.0">
+               <children>
+                  <Label text="Donde primero">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="va la comida">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="y luego ">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="el precio">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Pane layoutX="34.0" layoutY="189.0" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #d37841; -fx-rotate: 45;">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="48.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: -45;" styleClass="hause">
+                     <image>
+                        <Image url="@../image/House.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="2.0" layoutY="1.0" text="Usuario">
+               <font>
+                  <Font name="Bodoni MT Black" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="64.0" prefHeight="294.0" prefWidth="434.0" styleClass="fondoBlanco" stylesheets="@../resource/TonysKinal.css">
+         <children>
+            <GridPane layoutX="14.0" layoutY="12.0" prefHeight="271.0" prefWidth="403.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lblCodigo" prefHeight="41.0" prefWidth="179.0" text="Codigo Usuario:">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNombreUsuario" prefHeight="41.0" prefWidth="179.0" text="Nombre Usuario:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblApellidoUsuario" prefHeight="41.0" prefWidth="179.0" text="Apellido Usuario:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUsuario" prefHeight="41.0" prefWidth="179.0" text="Usuario:" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPassword" prefHeight="41.0" prefWidth="179.0" text="Password:" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="23.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigoUsuario" editable="false" prefHeight="41.0" prefWidth="201.0" style="-fx-background-color: #9c2026;" styleClass="lableDatos" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="txtNombreUsuario" editable="false" onKeyPressed="#ejectar" prefHeight="41.0" prefWidth="201.0" style="-fx-background-color: #9c2026;" styleClass="lableDatos" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="txtApellidoUsuario" editable="false" onKeyPressed="#ejectar" prefHeight="41.0" prefWidth="201.0" style="-fx-background-color: #9c2026;" styleClass="lableDatos" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="txtUsuario" editable="false" onKeyPressed="#ejectar" prefHeight="41.0" prefWidth="201.0" style="-fx-background-color: #9c2026;" styleClass="lableDatos" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="txtPassword" editable="false" onKeyPressed="#ejectar" prefHeight="41.0" prefWidth="201.0" style="-fx-background-color: #9c2026;" styleClass="lableDatos" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+               </children>
+            </GridPane>
+         </children></Pane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
